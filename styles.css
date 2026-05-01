@@ -1,0 +1,207 @@
+   *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2d0a1e, #4a1030, #1a0a2e);
+    min-height: 100vh;
+    color: whitesmoke;
+}
+
+
+body.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glassmorphism card */
+.glass-card {
+    background: rgba(255, 182, 213, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 182, 213, 0.3);
+    border-radius: 20px;
+    padding: 60px 50px;
+    text-align: center;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+}
+
+.glass-card h1 {
+    font-size: 2.5rem;
+    color: #ffb6d9;
+    margin-bottom: 10px;
+}
+
+.glass-card p {
+    font-size: 1rem;
+    color: rgba(255, 220, 235, 0.8);
+    margin-bottom: 30px;
+}
+
+/* Bubble buttons */
+.buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttons a {
+    display: inline-block;
+    background: #ff69b4;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(255, 105, 180, 0.5);
+}
+
+/* Sticky navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(45, 10, 30, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(255, 105, 180, 0.3);
+}
+
+.navbar h2 {
+    color: #ffb6d9;
+    font-size: 1.4rem;
+}
+
+.home-btn {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: 2px solid #ff69b4;
+    border-radius: 50px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.home-btn:hover {
+    background: #ff69b4;
+    color: white;
+}
+
+/* CSS Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+/* Product cards */
+.product {
+    position: relative;
+
+    height: 160px;
+    width: 100%;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    display: block;
+    text-decoration: none;
+
+    transition: transform 0.3s;
+}
+/* Images */
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product p {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    text-shadow: 1px 1px 5px black;
+}
+
+/* hover over */
+.product:hover {
+    transform: scale(1.05);
+}
+
+
+/* resume */
+
+.resume {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 40px;
+
+    background: rgba(255, 182, 213, 0.07);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 105, 180, 0.25);
+    border-radius: 16px;
+}
+
+.resume h1 {
+    font-size: 2rem;
+    color: #ffb6d9;
+    margin-bottom: 6px;
+}
+
+.resume p {
+    color: rgba(255, 220, 235, 0.85);
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.resume h2 {
+    color: #ff69b4;
+    font-size: 1.2rem;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 105, 180, 0.3);
+    padding-bottom: 4px;
+}
+
+.resume a {
+    display: inline-block;
+    margin-top: 24px;
+    color: #ff69b4;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #ff69b4;
+    padding: 8px 22px;
+    border-radius: 50px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.resume a:hover {
+    background: #ff69b4;
+    color: white;
+}
